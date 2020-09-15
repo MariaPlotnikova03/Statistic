@@ -17,8 +17,7 @@ class StatisticServiceTest {
         int actual = service.calculateSum(purchases);
 
         assertEquals(expected, actual);
-        System.out.println("Сумма всех продаж = " + service.calculateSum(purchases));
-    }
+           }
 
     @Test
     void averageSum() {
@@ -30,8 +29,7 @@ class StatisticServiceTest {
         int actual = service.averageSum(purchases);
 
         assertEquals(expected, actual);
-        System.out.println("Средння сумма продаж в месяц = " + service.averageSum(purchases));
-    }
+            }
 
 
     @Test
@@ -43,8 +41,7 @@ class StatisticServiceTest {
 
         int actual = service.maxSale(purchases);
         assertEquals(expected, actual);
-        System.out.println("Номер месяца, в котором был пик продаж = " + service.maxSale(purchases));
-    }
+            }
 
     @Test
     void minSale() {
@@ -56,8 +53,7 @@ class StatisticServiceTest {
         int actual = service.minSale(purchases);
 
         assertEquals(expected, actual);
-        System.out.println("Номер месяца, в котором был минимум продаж = " + service.minSale(purchases));
-    }
+           }
 
     @Test
     void belowAverage() {
@@ -69,8 +65,7 @@ class StatisticServiceTest {
         int actual = service.belowAverage(purchases);
 
         assertEquals(expected, actual);
-        System.out.println("Количество месяцев, в которых продажи были ниже среднего = " + service.belowAverage(purchases));
-    }
+          }
 
     @Test
     void aboveAverage() {
@@ -82,7 +77,6 @@ class StatisticServiceTest {
         int actual = service.aboveAverage(purchases);
 
         assertEquals(expected, actual);
-        System.out.println("Количество месяцев, в которых продажи были выше среднего = " + service.aboveAverage(purchases));
-    }
+            }
 }
 

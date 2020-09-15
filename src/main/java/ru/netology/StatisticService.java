@@ -12,7 +12,7 @@ public class StatisticService {
 
     public int averageSum(int[] purchases) {
         int sum = calculateSum(purchases);
-        return sum / 12;
+        return sum / purchases.length;
     }
 
     public int maxSale(int[] purchases) {
@@ -20,7 +20,7 @@ public class StatisticService {
         int monthNumber = 0;
         int resultMonthNumber = 0;
         for (int purchase : purchases) {
-            monthNumber += 1;
+            monthNumber ++;
             if (max <= purchase) {
                 max = purchase;
                 resultMonthNumber = monthNumber;
@@ -34,7 +34,7 @@ public class StatisticService {
         int monthNumber = 0;
         int resultMonthNumber = 0;
         for (int purchase : purchases) {
-            monthNumber += 1;
+            monthNumber ++;
             if (min >= purchase) {
                 min = purchase;
                 resultMonthNumber = monthNumber;
@@ -48,7 +48,7 @@ public class StatisticService {
         int average = averageSum(purchases);
         for (int purchase : purchases) {
             if (purchase < average) {
-                resultMonths += 1;
+                resultMonths ++;
             }
         }
         return resultMonths;
@@ -59,7 +59,7 @@ public class StatisticService {
         int average = averageSum(purchases);
         for (int purchase : purchases) {
             if (purchase > average) {
-                resultMonths += 1;
+                resultMonths ++;
             }
         }
         return resultMonths;
